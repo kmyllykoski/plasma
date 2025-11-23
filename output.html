@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Video Background</title>
+  <style>
+    html,body{height:100%;margin:0}
+    video{position:fixed;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);object-fit:cover}
+    /* backup background color in case video fails */
+    body{background:#000}
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline>
+    <source src="plasma-hd.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</body>
+</html>
