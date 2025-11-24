@@ -6,7 +6,23 @@
   <title>Video Background</title>
   <style>
     html,body{height:100%;margin:0}
-    video{position:fixed;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);object-fit:cover}
+    /* Use a CSS variable to allow scaling the centered video */
+    video{
+      position:fixed;
+      top:50%;
+      left:50%;
+      min-width:100%;
+      min-height:100%;
+      width:auto;
+      height:auto;
+      transform:translate(-50%,-50%) scale(var(--video-scale,1));
+      object-fit:cover;
+      transition: transform 220ms ease;
+    }
+    /* When the viewport is narrow, reduce the visual scale of the video */
+    @media (max-width:500px){
+      video{ --video-scale: 0.65; }
+    }
     /* backup background color in case video fails */
     body{background:#000}
   </style>
