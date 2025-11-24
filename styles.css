@@ -35,12 +35,33 @@ body{
 .textarea:active{ transform: scale(0.98); }
 .textarea h1{ font-size: clamp(18px,6vw,48px); margin:0; }
 
+/* Home button on blog page */
+.home-button{
+  /* position:fixed;
+  right:16px;
+  bottom:16px; */
+  background:#fff;
+  color:#000;
+  border:1px solid #000;
+  border-radius:8px;
+  padding:10px 14px;
+  text-decoration:none;
+  font-weight:600;
+  z-index:9999;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.home-button:focus{ outline:none; box-shadow:0 0 0 4px rgba(0,0,0,0.06); }
+.home-button:hover{ transform: translateY(-1px); }
+
 /* --- New overrides for page typography --- */
 /* Use Archivo Black for primary large headings */
 h1, h2{
   font-family: 'Archivo Black', 'ArchivoBlack', sans-serif;
   /* Archivo Black is a heavy display face — use normal weight */
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 1.5em;
   letter-spacing: 0.01em;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -67,3 +88,8 @@ p, .body-text {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+
+/* Utility: center contents of the home-button wrapper */
+.home-button-wrapper{ display:flex; justify-content:center; align-items:center; margin-top:34px; }
+/* If you use both classes: class="home-button-wrapper center" also works */
+.home-button-wrapper.center{ justify-content:center; }
