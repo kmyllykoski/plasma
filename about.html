@@ -26,10 +26,32 @@
             transform: translateY(0%);
             user-select: none;
         }
+
+        /* wrapper: vertical text on the left, links stacked on the right */
+        .center-wrap{
+            display:flex;
+            align-items:center;
+            gap:24px;
+        }
+        .links{
+            display:flex;
+            flex-direction:column;
+            gap:8px;
+        }
+        .links a{
+            color:#fff;
+            text-decoration:underline;
+            font-size:14px;
+        }
     </style>
 
-    <div class="vertical-center" aria-hidden="false">Under construction</div>
-    <!-- <a href="index.html" style="position:absolute;bottom:16px;left:16px;color:#fff;text-decoration:underline;font-size:14px;">Back to Home</a> -->
-    <a href="index.html" style="color:#fff;text-decoration:underline;font-size:14px;">Back to Home</a>
+    <div class="center-wrap" role="main" aria-labelledby="vc">
+        <div id="vc" class="vertical-center" aria-hidden="false">Under construction</div>
+
+        <nav class="links" aria-label="navigation links">
+            <a href="index.html">Back to Home</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </div>
 </body>
 </html>
