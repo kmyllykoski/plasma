@@ -5,9 +5,15 @@
 
 /* Use Museo Moderno as the primary site font; fall back to system fonts */
 body{
-    font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-weight:400;
-    margin:0;
+  font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight:400;
+  margin:0;
+  /* center all direct body content horizontally and vertically */
+  display:flex;
+  flex-direction:column;
+  /* justify-content:center; /* vertical centering */
+  align-items:center;     /* horizontal centering */
+  min-height:100vh;      /* ensure vertical centering works */
 }
 /* Ensure headings use the semibold (600) weight */
 /* h1, h2, h3{ font-family: 'Museo Moderno', 'MuseoModerno', sans-serif; font-weight:600; margin:0; } */
