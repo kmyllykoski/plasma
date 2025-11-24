@@ -16,9 +16,22 @@
             /* Ensure headings use the semibold (600) weight */
             h1, h2, h3{ font-family: 'Museo Moderno', 'MuseoModerno', sans-serif; font-weight:600; margin:0; }
 
-            /* Clickable textbox styles */
-            .textbox{ cursor:pointer; display:inline-block; }
-            .textbox:focus{ outline: 3px solid rgba(255,255,255,0.25); outline-offset:4px; }
+            /* Circular textarea (clickable) styles */
+            .textarea{
+              cursor:pointer;
+              display:inline-flex;
+              align-items:center;
+              justify-content:center;
+              width:clamp(110px,18vw,220px);
+              height:clamp(110px,18vw,220px);
+              border-radius:50%;
+              backdrop-filter: blur(4px);
+              background: rgba(0,0,0,0.35);
+              text-align:center;
+              user-select:none;
+            }
+            .textarea:focus{ outline: 3px solid rgba(255,255,255,0.25); outline-offset:6px; }
+            .textarea h1{ font-size: clamp(18px,6vw,48px); margin:0; }
         </style>
 </head>
 <body>
@@ -27,14 +40,13 @@
 
     <!-- Page content (appears above the video background) -->
     <main style="position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;justify-content:center;color:white;">
-                <div class="textbox" role="link" tabindex="0" aria-label="Enter site" style="backdrop-filter: blur(4px);padding:2rem;border-radius:8px;background:rgba(0,0,0,0.3); text-align:center;">
+                <div class="textarea" role="link" tabindex="0" aria-label="Enter site">
                         <h1>ENTER</h1>
-            <!-- <p>This page displays <code>output.html</code> as a full-screen video background.</p> -->
-        </div>
+                </div>
     </main>
         <script>
             (function(){
-                var box = document.querySelector('.textbox');
+                var box = document.querySelector('.textarea');
                 if(!box) return;
                 function navigate(){ window.location.href = 'about.html'; }
                 box.addEventListener('click', navigate, {passive:true});
