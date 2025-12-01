@@ -93,6 +93,12 @@ p, .body-text {
   font-size: 12px;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  box-sizing: border-box;
+  /* Limit paragraph width to 80% of the viewport and center it */
+  max-width: 80vw;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Utility: center contents of the home-button wrapper */
