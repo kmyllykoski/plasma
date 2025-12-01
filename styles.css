@@ -111,6 +111,8 @@ p, .body-text {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  overflow-wrap:anywhere; 
+  /* word-break:break-all; */
 }
 
 /* Utility: center contents of the home-button wrapper */
