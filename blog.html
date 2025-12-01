@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Export list of installed programs</h1>
+<h2>Export list of installed programs</h2>
 
 <h3>Published on: 2025-11-20</h3>
 
 <p>Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* |Select-Object DisplayName, DisplayVersion | Export-Csv "C:\InstalledPrograms.csv" -NoTypeInformation</p>
-<h1>Check disk space</h1>
+<h2>Check disk space</h2>
 
 <h3>Published on: 2025-11-05</h3>
 
 <p>Get-PSDrive -PSProvider FileSystem | Select-Object Name, Free, Used, @{Name="Total";Expression={$_.Free + $_.Used}}</p>
-<h1>List all running processes</h1>
+<h2>List all running processes</h2>
 
 <h3>Published on: 2025-11-01</h3>
 
