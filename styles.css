@@ -63,11 +63,23 @@ body{
 
 /* --- New overrides for page typography --- */
 /* Use Archivo Black for primary large headings */
-h1, h2{
+h1 {
   font-family: 'Archivo Black', 'ArchivoBlack', sans-serif;
   /* Archivo Black is a heavy display face — use normal weight */
   font-weight: 300;
   font-size: 1.5em;
+  letter-spacing: 0.01em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+h2{
+  font-family: 'Archivo Black', 'ArchivoBlack', sans-serif;
+  /* Archivo Black is a heavy display face — use normal weight */
+  font-weight: 300;
+  font-size: 14px;
   letter-spacing: 0.01em;
     margin-block-start: 0;
     margin-block-end: 0;
